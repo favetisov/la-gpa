@@ -2,6 +2,8 @@ import { Component, h, Prop } from '@stencil/core';
 import { Task } from '@src/models/task.model';
 import { TasksService } from '@src/services/tasks.service';
 import { environment } from '@src/environments/environment';
+import { buildRoute } from '@src/tools/build-route';
+import { routes } from '@src/tools/routes';
 @Component({
   tag: 'gpa-task',
   styleUrl: 'gpa-task.component.scss',
@@ -19,7 +21,12 @@ export class GpaTask {
     return [
       <gpa-header>Задание #{this.taskId}</gpa-header>,
       <ion-content>
-        <gpa-breadcrumbs crumbs={[{ href: location.href, render: () => this.task.quest.title + ', #' + this.taskId }]} />
+        <gpa-breadcrumbs
+          crumbs={[
+            { href: buildRoute(routes.quest, { questId: this.task.quest.id, questTitle: this.task.quest.title }), render: () => this.task.quest.title },
+            { href: location.href, render: () => 'задание #' + this.taskId },
+          ]}
+        />
         {this.renderContent()}
       </ion-content>,
     ];

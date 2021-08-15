@@ -1,0 +1,57 @@
+gpa-card {
+  display: block;
+  margin: 20px auto;
+  padding: 0 20px;
+  background: white;
+  //border: 2px solid var(--ion-color-primary);
+  border: 2px solid black;
+  max-width: 800px;
+  h1 {
+    color: var(--ion-color-primary);
+    text-transform: uppercase;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+    font-weight: 100;
+  }
+  section {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  }
+  .nothing-found {
+    padding: 30px;
+    font-size: 12px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .row {
+    //todo: move to list component
+    display: flex;
+    .info {
+      flex: 1;
+    }
+    .action-button {
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.2;
+      display: flex;
+      align-items: center;
+      padding-left: 5px;
+      transition: opacity 0.2s ease-in-out;
+      gpa-icon {
+        transform: rotate(-90deg);
+        height: 10px;
+        width: 10px;
+        margin-left: 5px;
+      }
+    }
+    &:hover {
+      .action-button {
+        opacity: 0.5;
+      }
+    }
+  }
+}

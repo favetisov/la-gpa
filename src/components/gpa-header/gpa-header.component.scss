@@ -1,0 +1,41 @@
+gpa-header {
+  ion-title {
+    --color: var(--ion-color-primary);
+  }
+  .user-button {
+    padding: 0 20px;
+    &:hover {
+      --background: rgba(255, 255, 255, 0.2);
+    }
+    .user-name {
+      color: var(--ion-color-primary);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 2px;
+      margin-right: 10px;
+    }
+    gpa-icon {
+      fill: var(--ion-color-primary);
+      height: 20px;
+      width: 20px;
+    }
+  }
+  @media (max-width: 800px) {
+    .user-button {
+      padding: 0;
+      .user-name {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    ion-title {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}

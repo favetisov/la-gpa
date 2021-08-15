@@ -1,0 +1,106 @@
+gpa-searchable-content {
+  .gpa-searchable-content__search-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    .input-wrapper {
+      flex: 1;
+      display: flex;
+      .inputs {
+        flex: 1;
+        display: flex;
+        position: relative;
+        input {
+          flex: 1;
+          height: 33px;
+          font-size: 12px;
+          border: none;
+          margin-bottom: 5px;
+          outline: none;
+          &.hidden {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            max-width: 0;
+            margin: 0;
+            padding: 0;
+            border: none;
+          }
+        }
+        gpa-spinner {
+          position: absolute;
+          right: 10px;
+          top: 8px;
+          --size: 6px;
+          --color: black;
+          &.hidden {
+            opacity: 0;
+          }
+        }
+      }
+      &.hidden {
+        height: 0;
+        width: 0;
+        max-width: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .category-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .category-background {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          user-select: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          //border-left: 1px solid rgba(0, 0, 0, 0.2);
+          font-size: 10px;
+          & > div {
+            display: flex;
+            align-items: center;
+          }
+          gpa-icon:last-of-type {
+            height: 7px;
+            width: 7px;
+            margin-left: 7.5px;
+            svg {
+              transition: all 0.2s ease-in-out;
+            }
+            &.open svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+    .options {
+      position: absolute;
+      z-index: 1000;
+      top: 40px;
+      right: 0;
+      box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+      padding: 5px;
+      background: white;
+      .option-wrapper {
+        padding: 10px 20px;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .option {
+          display: flex;
+          align-items: center;
+          user-select: none;
+          cursor: pointer;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+gpa-breadcrumbs {
+  @media (max-width: 800px) {
+    display: none !important;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 20px;
+  font-weight: 600;
+  position: relative;
+  .pathes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    user-select: none;
+    font-size: 14px;
+    .chevron {
+      transform: rotate(-90deg) translateX(1px);
+      fill: var(--ion-color-primary);
+      margin-right: 3px;
+      margin-left: 3px;
+      margin-top: 1px;
+      height: 10px;
+      width: 10px;
+    }
+    ion-router-link {
+      --color: var(--ion-color-primary);
+      text-transform: uppercase;
+      &:hover {
+        --color: var(--ion-color-primary-tint);
+      }
+    }
+  }
+}

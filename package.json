@@ -1,0 +1,36 @@
+{
+  "name": "la-gpa",
+  "private": true,
+  "version": "0.0.1",
+  "description": "la-gpa",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "gen": "node scripts/generate-component.js",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watch"
+  },
+  "devDependencies": {
+    "@ionic/core": "^5.3.2",
+    "@stencil/core": "^2.0.1",
+    "@types/jest": "^26.0.24",
+    "@types/puppeteer": "^5.4.3",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "prettier": "^2.3.2",
+    "puppeteer": "^5.5.0",
+    "simple-git": "^2.44.0"
+  },
+  "dependencies": {
+    "@capacitor/storage": "^1.0.3",
+    "@stencil/sass": "^1.4.1",
+    "@stencil/store": "^1.4.1",
+    "dayjs": "^1.10.6",
+    "rxjs": "^7.3.0",
+    "stencil-inline-svg": "^1.1.0"
+  }
+}

@@ -38,6 +38,7 @@ export class GpaRoot {
           <ion-route url={routes.quest} component="gpa-quest" />
           <ion-route url={routes.profile} component="gpa-profile" />
           <ion-route url={routes.task} component="gpa-task" />
+          <ion-route url={routes.viewer_demo} component="gpa-viewer-demo" />
         </ion-router>
         <ion-nav animated={false} />
       </ion-app>
